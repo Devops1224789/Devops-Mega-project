@@ -26,7 +26,7 @@ pipeline{
         }
         stage("Checkout from SCM"){
             steps {
-                git branch: 'main', credentialsId: 'github', url: 'https://github.com/Devops1224789/Devops-Mega-project.git'
+                git branch: 'main', credentialsId: 'github', url: 'https://github.com/siddhisjain268/Devops-Mega-project'
             }
 
         }
@@ -113,15 +113,15 @@ pipeline{
     post {
           success {
               emailext (
-                  to: 'devopsstudy09@gmail.com',
+                  to: 'siddhijain268@gmail.com',
                   subject: "SUCCESS: Job '${env.JOB_NAME} [${env.BUILD_NUMBER}]'",
-                  body: """<p>Job '${env.JOB_NAME} [${env.BUILD_NUMBER}]' succeeded.</p><p>Check console output at <a href='${env.BUILD_URL}'>${env.BUILD_URL}</a></p>""",
+                  body: """<p>Job '${env.JOB_NAME} [${env.BUILD_NUMBER}]' succeeded5.</p><p>Check console output at <a href='${env.BUILD_URL}'>${env.BUILD_URL}</a></p>""",
                   mimeType: 'text/html'
               )
           }
           failure {
               emailext (
-                  to: 'devopsstudy09@gmail.com',
+                  to: 'siddhijain268@gmail.com',
                   subject: "FAILURE: Job '${env.JOB_NAME} [${env.BUILD_NUMBER}]'",
                   body: """<p>Job '${env.JOB_NAME} [${env.BUILD_NUMBER}]' failed.</p><p>Check console output at <a href='${env.BUILD_URL}'>${env.BUILD_URL}</a></p>""",
                   mimeType: 'text/html'
