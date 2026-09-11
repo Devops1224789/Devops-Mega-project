@@ -44,6 +44,8 @@ pipeline{
                sh "mvn test"
             }
 
+        }
+
         stage("Sonarqube Analysis") {
             steps {
                 script {
@@ -129,4 +131,4 @@ pipeline{
     //    }
     } 
 }
-}
+
