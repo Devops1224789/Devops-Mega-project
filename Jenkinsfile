@@ -38,13 +38,7 @@ pipeline{
             }
 
         }
-
-        // stage("Test the application"){
-        //     steps {
-        //        sh "mvn test"
-        //     }
-
-        // }
+upd
 
         stage("Sonarqube Analysis") {
             steps {
