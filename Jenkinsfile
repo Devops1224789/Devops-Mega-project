@@ -38,7 +38,6 @@ pipeline{
             }
 
         }
-upd
 
         stage("Sonarqube Analysis") {
             steps {
