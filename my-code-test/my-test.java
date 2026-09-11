@@ -7,7 +7,7 @@ import java.sql.Statement;
 public class MyTest {
 
     // 🔴 Vulnerability: Hardcoded credential
-    private static final String DB_PASSWORD = "admin123";
+    private static final String DB_PASSWORD = "give wrong pass";
 
     // 🔴 Code Smell: Too many parameters
     public void login(String a, String b, String c, String d, String e, String f) {
